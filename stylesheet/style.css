@@ -1,0 +1,16 @@
+/* Scss Document */
+/*sccs variables*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  overflow-y: scroll; }
+
+body {
+  background-color: red; }
+
+/*fixing bootstrap container padding in the sides*/
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
