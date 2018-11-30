@@ -36,12 +36,27 @@
 			</div>
 		</nav>
 		<!--Navbar end-->
-			<div class="row">
-					<div class="col-6">
+			<div class="container mt-3 mb-3">
+				<div class="row">
+					<div class="col-xl-2 col-sm-12 border">
 					<div class="font-weight-bold">vid-title</div>
-					<div class="border"><a href="https://via.placeholder.com/150x150.png/"></a></div>
+					<img class="mb-3" src="https://via.placeholder.com/150x150">
+						<div class="font-weight-bold">vid-title</div>
+					<img class="mb-3" src="https://via.placeholder.com/150x150">
+						<div class="font-weight-bold">vid-title</div>
+					<img class="mb-3" src="https://via.placeholder.com/150x150">
+						<div class="font-weight-bold">vid-title</div>
+					<img class="mb-3" src="https://via.placeholder.com/150x150">
 				</div>
-				<div class="col-6">q</div>
+				<div class="col-xl-6 col-sm-12">
+					<div class="font-weight-bold">vid-title</div>
+					<img src="https://via.placeholder.com/300x300">
+				</div>
+				<div class="col-xl-4 col-sm-12 border">
+					<div class="font-weight-bold">Beskrivelse</div>
+					<div class="">123</div>
+				</div>
+			</div>
 			</div>
 			</body>
 		</html>
