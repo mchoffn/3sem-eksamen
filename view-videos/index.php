@@ -38,23 +38,26 @@
 		<!--Navbar end-->
 			<div class="container mt-3 mb-3">
 				<div class="row">
-					<div class="col-xl-2 col-sm-12 border">
-					<div class="font-weight-bold">vid-title</div>
-					<img class="mb-3" src="https://via.placeholder.com/150x150">
+					<div class="col-xl-2 border">
+						
+						<div class="font-weight-bold">vid-title</div>
+					<img class="mb-3" src="https://via.placeholder.com/150x150">	
+						
 						<div class="font-weight-bold">vid-title</div>
 					<img class="mb-3" src="https://via.placeholder.com/150x150">
 						<div class="font-weight-bold">vid-title</div>
 					<img class="mb-3" src="https://via.placeholder.com/150x150">
 						<div class="font-weight-bold">vid-title</div>
 					<img class="mb-3" src="https://via.placeholder.com/150x150">
+						
 				</div>
-				<div class="col-xl-6 col-sm-12">
+				<div class="col-xl-6 col-sm-12 mb-3">
 					<div class="font-weight-bold">vid-title</div>
 					<img src="https://via.placeholder.com/300x300">
 				</div>
 				<div class="col-xl-4 col-sm-12 border">
 					<div class="font-weight-bold">Beskrivelse</div>
-					<div class="">123</div>
+					<div class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque numquam voluptatum enim vero ullam hic quibusdam voluptatibus, fuga! Harum rem eveniet, laborum iste temporibus quaerat facilis in distinctio illum quia? Nesciunt doloribus velit, maxime, sed quaerat incidunt culpa doloremque nisi consectetur quibusdam, earum eveniet aliquid voluptate eaque ab dolorem sit?</div>
 				</div>
 			</div>
 			</div>
