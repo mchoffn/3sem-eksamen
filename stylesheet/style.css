@@ -37,4 +37,82 @@ body {
 /*Responsive*/
 @media screen and (max-width: 480px) {
   .input-field {
-    width: 65%; } }
+    width: 65%;
+  }
+}
+
+.mainwrapper {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.loginnav {
+  width: 100%px;
+  height: 60px;
+  background-color: aqua;
+}
+
+.loginnav ul {
+  float: left;
+}
+
+.loginnav ul li {
+  float: left;
+  list-style: none;
+}
+
+.loginhead nav ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: darkorange;
+  line-height: 63px;
+}
+
+.nav-login form {
+  float: left;
+  padding-top: 15px;
+}
+
+.nav-login form input {
+  float: left;
+  width: 140px;
+  height: 30px;
+  padding: 0px 10px;
+  margin-right: 10px;
+  border: none;
+  background: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: darkorange;
+  line-height: 63px;
+}
+
+.nav-login form button {
+  float: left;
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+  border: none;
+  background: #ff33ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: darkorange;
+  cursor: pointer;
+}
+
+.nav-login form button {
+  background-color: #ccc;
+}
+
+.loginhead .nav-login a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: darkorange;
+  line-height: 63px;
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@
 
 <header class="loginhead">
 	<nav class="loginnav">
-		<div class="">
+		<div class="mainwrapper">
 			<ul>
 				<li><a href="index.php">Hjem</a></li>
 			</ul>
