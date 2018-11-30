@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="images/fa-image.png">
+	<link rel="shortcut icon" href="../images/fa-image.png">
 
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,7 +17,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<!--css-->
-	<link rel="stylesheet" href="stylesheet/style.css">
+	<link rel="stylesheet" href="../stylesheet/style.css">
 </head>
 
 <body>
@@ -36,12 +36,12 @@
 			</div>
 		</nav>
 		<!--Navbar end-->
-		
-		<!--Add new catagory-->
-		<div class="text-center my-auto">
-			<div class="font-weight-bold">Tilføj ny katogori</div>
-			<a href="new-catagory/index.php"><button class="btn btn-primary btn-lg mx-auto">+</button</a>
+			<div class="row">
+					<div class="col-6">
+					<div class="font-weight-bold">vid-title</div>
+					<div class="border"><a href="https://via.placeholder.com/150x150.png/"></a></div>
+				</div>
+				<div class="col-6">q</div>
 			</div>
-	</div>
-</body>
-</html>
+			</body>
+		</html>
