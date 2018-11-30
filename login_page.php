@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Loginsystem</title>
-<link rel="stylesheet/style.css"/>
+<link rel="stylesheet" href="stylesheet/style.css"/>
 	
 </head>
 
@@ -11,7 +11,7 @@
 
 <header class="loginhead">
 	<nav class="loginnav">
-		<div class="">
+		<div class="mainwrapper">
 			<ul>
 				<li><a href="index.php">Hjem</a></li>
 			</ul>
