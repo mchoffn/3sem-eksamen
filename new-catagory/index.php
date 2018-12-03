@@ -23,7 +23,7 @@
 <body>
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">(logo/navn)</a>
+			<a class="navbar-brand" href="../index.php">(logo/navn)</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,11 +50,19 @@
 						</div>
 						<br>
 						<div class="form-input">
+						</div>
+						<br>
+						<div class="form-input">
 							<div class="font-weight-bold input-txt">Beskrivelse: </div>
 						<input class="input-field" type="text" name="catagory_description" required>
 						</div>
 						<br>
-						<button class="btn btn-primary btn-block" value="Tilføj">Tilføj</button>
+						<div class="custom-file mb-3">
+  <input type="file" accept=".png/.jpg" class="custom-file-input" id="customFile" required>
+  <label class="custom-file-label" for="customFile">Forhåndsvisning (.png, jpg)</label>
+</div>
+						<br>
+						<button class="btn btn-primary btn-block" value="new_catagory">Tilføj</button>
 					</form>
 				</div>
 			</div>

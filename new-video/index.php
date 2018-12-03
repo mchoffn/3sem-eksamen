@@ -23,7 +23,7 @@
 <body>
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">(logo/navn)</a>
+			<a class="navbar-brand" href="../index.php">(logo/navn)</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -57,10 +57,10 @@
 					<br>
 					<div class="custom-file mb-3">
   <input type="file" accept=".mp4" class="custom-file-input" id="customFile" required>
-  <label class="custom-file-label" for="customFile">Choose file</label>
+  <label class="custom-file-label" for="customFile">Vælg video (.mp4)</label>
 </div>
 					<br>
-					<button class="btn btn-primary btn-block" value="Tilføj">Tilføj</button>
+					<button class="btn btn-primary btn-block" value="new_video">Tilføj</button>
 				</form>
 			</div>
 		</div>

@@ -40,13 +40,33 @@ body{
 	width: 300px;
 }
 
+/*view video page*/
+.video-list{
+	max-height: 425px;
+	overflow-y: scroll;
+}
+.media-body{
+	width: 100%;
+}
+
 /*Responsive*/
 @media screen and (max-width: 480px){
 	.input-field{
 		width: 65%;
 	}
+	.video-container{
+		order: 1;
+	}
+	.video-description{
+		order: 2;
+		margin-bottom: 20px;
+	}
+	.video-list{
+		order: 3;
+	}
 }
 
+/*Login*/
 .mainwrapper {
 	margin: 0 auto;
 	width: 1000px;
