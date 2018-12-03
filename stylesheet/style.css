@@ -1,0 +1,83 @@
+/* Scss Document */
+/*sccs variables*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: white;
+}
+
+/*fixing bootstrap container padding in the sides*/
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*Add new catagory page*/
+.form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.input-txt {
+  padding-right: 10px;
+}
+
+.input-field {
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 300px;
+}
+
+/*view video page*/
+.video-list {
+  max-height: 425px;
+  overflow-y: scroll;
+}
+
+.media-body {
+  width: 100%;
+}
+
+/*Responsive*/
+@media screen and (max-width: 480px) {
+  .input-field {
+    width: 65%;
+  }
+  .video-container {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .video-description {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .video-list {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+}
+
+/*Login*/
