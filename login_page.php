@@ -9,14 +9,14 @@
 
 <body>
 
-<header class="loginhead">
+<div class="loginhead">
 	<nav class="loginnav">
 		<div class="mainwrapper">
 			<ul>
 				<li><a href="index.php">Hjem</a></li>
 			</ul>
 			<div class="nav-login">
-					<form>
+					<form action="" autocomplete="off">
 							<input type="text" name="uid" placeholder="Useremail/e-mail">
 							<input type="password" name="pwd" placeholder="password">
 							<button type="submit" name="submit">Login</button>
@@ -25,5 +25,6 @@
 			</div>
 		</div>
 	</nav>
+	</div>
 </body>
 </html>
