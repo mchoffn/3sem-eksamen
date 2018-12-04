@@ -1,5 +1,3 @@
-/* Scss Document */
-/*sccs variables*/
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +5,6 @@
 
 html {
   overflow-y: scroll;
-}
-
-body {
-  background-color: white;
 }
 
 /*fixing bootstrap container padding in the sides*/
@@ -57,7 +51,6 @@ body {
   width: 100%;
 }
 
-/*Responsive*/
 @media screen and (max-width: 480px) {
   .input-field {
     width: 65%;
