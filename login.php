@@ -9,9 +9,9 @@
 
 <body>
 
-<div class="loginhead">
-	<nav class="loginnav">
-		<div class="mainwrapper">
+<header class="loginhead">
+	<nav class="login-wrappera">
+		<div class="loginbot">
 			<ul>
 				<li><a href="index.php">Hjem</a></li>
 			</ul>
@@ -25,6 +25,11 @@
 			</div>
 		</div>
 	</nav>
-	</div>
+</header>
+
+<section>
+
+</section>
+
 </body>
 </html>
