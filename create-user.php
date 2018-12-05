@@ -52,42 +52,10 @@
 	$stmt->execute();
 
 	if ( $stmt->affected_rows > 0 ) {
-		echo 'User ' . $un . ' created';
+		echo 'Brugernavn ' . $un . ' oprettet';
 	} else {
-		echo 'Could not create user - username ' . $un . ' already exists!';
+		echo 'Kunne ikke oprette bruger med brugernavnet "' . $un . '", fordi at dette brugernavn allerede er taget.';
 	}
-
-	?>
-
-
-
-
-	<?php
-
-	session_start();
-
-	//Log in
-	$un = filter_input( INPUT_POST, 'un' )or die( 'Missing or illegal un parameter' );
-	$pw = filter_input( INPUT_POST, 'pw' )or die( 'Missing or illegal pw parameter' );
-
-
-
-	$sql = 'SELECT id, pwhash FROM ss_users WHERE username=?';
-	$stmt = $link->prepare( $sql );
-	$stmt->bind_param( 's', $un );
-	$stmt->execute();
-	$stmt->bind_result( $id, $pwhash );
-
-	while ( $stmt->fetch() ) {}
-
-	if ( password_verify( $pw, $pwhash ) ) {
-		echo 'un and pw matched user with id:' . $id;
-		$_SESSION[ 'uid' ] = $id;
-		$_SESSION[ 'uname' ] = $un;
-	} else {
-		echo 'Illegal username/password combination';
-	}
-
 
 	?>
 </body>

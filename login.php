@@ -42,12 +42,13 @@
 	while ($stmt->fetch()){	}
 	
 	if (password_verify($pw,$pwhash)){
-		echo 'un and pw matched user with id:'.$id. ' Go to '?><a href="index.php">frontpage</a><?php;
+		//echo 'Brugernavn og password passer med brugerid: '.$id.
+		echo 'Brugernavn og password er korrekt. Gå til '?><a href="index.php">forsiden</a><?php;
 		$_SESSION['uid'] = $id;
 		$_SESSION['uname'] = $un;
 	}
 	else{
-		echo 'Illegal username/password combination';
+		echo 'Ugyldigt kombination af brugernavn/password.';
 	}
 	
 	
