@@ -1,27 +1,17 @@
 <!doctype html>
 <html>
 <head>
+<?php
+	include 'includes/special/head.php';
+	?>
+
+	<meta http-equiv="refresh" content="3; url=index.php"/>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
 </head>
 
 <body>
-	<form action="create-user.php" method="post">
-		<fieldset>
-			<legend>Create User</legend>
-			<input type="text" autocomplete="off" name="un" placeholder="Username" required>
-			<input type="password" autocomplete="off" name="pw" placeholder="Password" required>
-			<button type="submit">Opret</button>
-		</fieldset>
-	</form>
-	<form action="login.php" method="post">
-		<fieldset>
-			<legend>Login</legend>
-			<input type="text" autocomplete="off" name="un" placeholder="Username" required>
-			<input type="password" autocomplete="off" name="pw" placeholder="Password" required>
-			<button type="submit">Login</button>
-		</fieldset>
-	</form>
+
 	
 <?php
 	
