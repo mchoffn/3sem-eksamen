@@ -55,7 +55,7 @@
   <label class="custom-file-label" for="customFile">Vælg video (.mp4)</label>
 </div>
 					<br>
-					<button class="btn btn-primary btn-block" value="new_video">Tilføj</button>
+					<input class="btn btn-primary btn-block" type="submit" value="Tilføj">
 				</form>
 			</div>
 		</div>

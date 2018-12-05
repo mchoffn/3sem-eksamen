@@ -30,6 +30,7 @@ session_destroy();
 ?>
 	
 	<h2>You are now logged out</h2>
+	<a href="create-user.php">Go back to create user/login page</a>
 	
 </body>
 </html>

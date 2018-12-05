@@ -1,6 +1,6 @@
 <!--Navbar start-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="../index.php"><img src="../images/sunset-favicon.png" width="75"></a>
+	<a class="navbar-brand" href="index.php"><img src="images/sunset-favicon.png" width="75"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,7 +18,7 @@
 	
 	
 	?> (*role*)<span class="sr-only"></span></a>
-					<form action="../logout.php">
+					<form action="logout.php">
 						<button class="btn btn-outline-danger" type="submit">Logout</button>
 					</form>
 	</div>
