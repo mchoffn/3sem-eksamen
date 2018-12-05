@@ -56,6 +56,10 @@ html {
   background-color: #313131;
 }
 
+p {
+  margin-bottom: inherit;
+}
+
 @media screen and (max-width: 480px) {
   .input-field {
     width: 65%;
