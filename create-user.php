@@ -14,7 +14,7 @@
 			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
 				<h2 class="text-light">Create User</h2>
 				<p class="text-light">Brugernavn</p>
-				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Username" required>
+				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
 				<p class="text-light">Password</p>
 				<input class="border-0 p-2 rounded mb-3" type="password" autocomplete="off" name="pw" placeholder="Password" required>
 				<br>
@@ -24,7 +24,7 @@
 			<form class="login mt-3" action="login.php" method="post">
 				<h2 class="text-light">Login</h2>
 				<p class="text-light">Brugernavn</p>
-				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Username" required>
+				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
 				<p class="text-light">Password</p>
 				<input class="border-0 p-2 rounded mb-3" type="password" autocomplete="off" name="pw" placeholder="Password" required>
 				<br>
