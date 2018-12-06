@@ -15,3 +15,8 @@
 
 <!--CSS-->
 <link rel="stylesheet" href="../stylesheet/style.css">
+
+<!--Showing any errors-->
+<?php
+ini_set('display_errors', true);
+?>

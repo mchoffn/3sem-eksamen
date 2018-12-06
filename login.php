@@ -93,14 +93,17 @@
 
 	if ( password_verify( $pw, $pwhash ) ) {
 		//echo 'Brugernavn og password passer med brugerid: '.$id.
-		echo 'Brugernavn og password er korrekt. Gå til '
-		?><a href="index.php">forsiden</a>
-	<?php;
+		echo ?> <div class="text-center"><?php'Brugernavn og password er korrekt. Gå til ' ?><a href="index.php">forsiden</a></div>
+
+
+	<?php
 	$_SESSION[ 'uid' ] = $id;
 	$_SESSION[ 'uname' ] = $un;
 	}
 	else {
-		echo 'Ugyldigt kombination af brugernavn/password.';
+		echo 'Ugyldigt kombination af brugernavn/password. Gå tilbage til '
+		?><a href="create-user.php">login siden</a>
+	<?php
 	}
 
 

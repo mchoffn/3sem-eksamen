@@ -67,7 +67,7 @@
 			<div class="col"></div>
 		</div>
 		<?php
-	//Create user
+	//Create category
 	$ct = filter_input( INPUT_POST, 'category_title' )or die( 'Missing or illegal category title parameter' );
 	$cd = filter_input( INPUT_POST, 'category_description' )or die( 'Missing or illegal category description parameter' );
 	$ctn = filter_input( INPUT_POST, 'category_thumbnail' )or die( 'Missing or illegal category thumbnail parameter' );
