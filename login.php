@@ -75,36 +75,38 @@
 
 	<?php
 
-	session_start();
+		session_start();
 
-	$un = filter_input( INPUT_POST, 'un' )or die( 'Missing or illegal un parameter' );
-	$pw = filter_input( INPUT_POST, 'pw' )or die( 'Missing or illegal pw parameter' );
+		$un = filter_input( INPUT_POST, 'un' )or die( 'Missing or illegal un parameter' );
+		$pw = filter_input( INPUT_POST, 'pw' )or die( 'Missing or illegal pw parameter' );
 
 
-	require_once( 'database-connect/dbcon.php' );
+		require_once( 'database-connect/dbcon.php' );
 
-	$sql = 'SELECT id, pwhash FROM ss_users WHERE username=?';
-	$stmt = $link->prepare( $sql );
-	$stmt->bind_param( 's', $un );
-	$stmt->execute();
-	$stmt->bind_result( $id, $pwhash );
+		$sql = 'SELECT id, pwhash FROM ss_users WHERE username=?';
+		$stmt = $link->prepare( $sql );
+		$stmt->bind_param( 's', $un );
+		$stmt->execute();
+		$stmt->bind_result( $id, $pwhash );
 
-	while ( $stmt->fetch() ) {}
+		while ( $stmt->fetch() ) {}
 
-	if ( password_verify( $pw, $pwhash ) ) {
+		if ( password_verify( $pw, $pwhash ) ) {
 		//echo 'Brugernavn og password passer med brugerid: '.$id.
-		echo ?> <div class="text-center"><?php'Brugernavn og password er korrekt. Gå til ' ?><a href="index.php">forsiden</a></div>
 
+		echo '<a href="'.$link_localhost/login.php/'">Link</a>';
 
+			//echo <div class="text-center"><?php'Brugernavn og password er korrekt. Gå til ' <a href="index.php">forsiden</a></div>
+			?>
 	<?php
-	$_SESSION[ 'uid' ] = $id;
-	$_SESSION[ 'uname' ] = $un;
-	}
+		$_SESSION[ 'uid' ] = $id;
+		$_SESSION[ 'uname' ] = $un;
+		}
 	else {
 		echo 'Ugyldigt kombination af brugernavn/password. Gå tilbage til '
 		?><a href="create-user.php">login siden</a>
-	<?php
-	}
+		<?php
+		}
 
 
 	?>
