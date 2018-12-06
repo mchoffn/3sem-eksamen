@@ -96,7 +96,7 @@
 
 		echo '<a href="'.$link_localhost/login.php/'">Link</a>';
 
-			//echo <div class="text-center"><?php'Brugernavn og password er korrekt. Gå til ' <a href="index.php">forsiden</a></div>
+			echo <div class="text-center"><?php'Brugernavn og password er korrekt. Gå til ' <a href="index.php">forsiden</a></div>
 			?>
 	<?php
 		$_SESSION[ 'uid' ] = $id;
