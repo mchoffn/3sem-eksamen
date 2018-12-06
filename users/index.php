@@ -32,6 +32,24 @@
 			$link->close();
 			?>
 
+			<table class="table table-striped">
+				<thead class="thead bg-success text-light">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Navn</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<?php
+					$num = 1;
+					foreach ( $sql as $user ) {
+						echo '<tr><th scope="row">' . $num++ . '</th><td>' . $user->Navn . "</td>";
+					}
+
+					?>
+			</table>
+
 			<?php
 			include '../includes/footer.php';
 			?>
