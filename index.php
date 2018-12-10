@@ -9,7 +9,7 @@
 <body>
 	<div class="container-fluid">
 		<?php
-			include 'includes/special/navbar.php';
+		include 'includes/special/navbar.php';
 		?>
 
 		<!--Add new category-->
@@ -44,51 +44,67 @@
 
 		<h2 class="text-center mt-3">Kategorier:</h2>
 
-		<!--List of categories crated-->
-		<div class="row d-flex justify-content-around mt-3">
-			<div class="col"></div>
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-			<div class="col"></div>
-		</div>
 		<?php
-	//Create category
-	$ct = filter_input( INPUT_POST, 'category_title' )or die( 'Missing or illegal category title parameter' );
-	$cd = filter_input( INPUT_POST, 'category_description' )or die( 'Missing or illegal category description parameter' );
-	$ctn = filter_input( INPUT_POST, 'category_thumbnail' )or die( 'Missing or illegal category thumbnail parameter' );
+		//Create category
+		$ct = filter_input( INPUT_POST, 'category_title' )or die( 'Missing or illegal category title parameter' );
+		$cd = filter_input( INPUT_POST, 'category_description' )or die( 'Missing or illegal category description parameter' );
+		$ctn = filter_input( INPUT_POST, 'category_thumbnail' )or die( 'Missing or illegal category thumbnail parameter' );
 
-	//$pwhash = password_hash( $pw, PASSWORD_DEFAULT );
+		//$pwhash = password_hash( $pw, PASSWORD_DEFAULT );
 
 
-	require_once( 'database-connect/dbcon.php' );
+		require_once( 'database-connect/dbcon.php' );
 
-	$sql = 'INSERT INTO ss_category (title, description, thumbnail) VALUES (?, ?, ?)';
-	$stmt = $link->prepare( $sql );
-	$stmt->bind_param( 'ss', $ct, $cd, $ctn );
-	$stmt->execute();
+		$sql = 'INSERT INTO ss_category (title, description, thumbnail) VALUES (?, ?, ?)';
+		$stmt = $link->prepare( $sql );
+		$stmt->bind_param( 'sss', $ct, $cd, $ctn );
+		$stmt->execute();
 
-	if ( $stmt->affected_rows > 0 ) {
-		echo 'Brugernavn ' . $ct . ' oprettet';
-	} else {
-		echo 'Kunne ikke oprette bruger med brugernavnet "' . $ct . '", fordi at dette brugernavn allerede er taget.';
-	}
+		if ( $stmt->affected_rows > 0 ) {
+			echo '<div class="text-center">Kategori ' . $ct . ' oprettet</div>' . PHP_EOL;
+		} else {
+			echo '<div class="text-center">Fejl upstået under tilføjelse af ny kategori. Dette kan muligvis skyldes at en titel skal være unik og titlen "' . $ct . '" er allerede taget. Prøv en anden title.' . PHP_EOL;
+		}
 
-	?>
+		?>
+		<!--Start category container-->
+		<div class="row d-flex justify-content-around mt-3">
+		<?php
+		//Showing all categories
+		$sql = "SELECT title, description, thumbnail FROM ss_category";
+		$result = $link->query( $sql );
+
+		if ( $result->num_rows > 0 ) {
+			// output data of each row
+			while ( $row = $result->fetch_assoc() ) {
+				echo 
+		'
+			<div class="col"></div>
+			<div class="category-item col-xl-3 col-sm-12">
+				<h2>
+					' . $row[ "title" ] . '
+				</h2>
+				<p>
+					' . $row[ "description" ] . '
+				</p>
+				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"</img></a>
+			</div>
+			<div class="col">
+			
+		</div>';
+
+
+		//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
+		}
+		} else {
+			echo "0 results";
+		}
+
+		$link->close();
+		?>
+		</div>
+		<!--End category container-->
+		
 		<!--New row-->
 		<div class="row d-flex justify-content-around mt-3">
 			<div class="col"></div>
@@ -111,9 +127,9 @@
 			</div>
 			<div class="col"></div>
 		</div>
-		
+
 		<?php
-			include 'includes/special/footer.php';
+		include 'includes/special/footer.php';
 		?>
 	</div>
 </body>

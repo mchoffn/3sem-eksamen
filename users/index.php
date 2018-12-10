@@ -32,6 +32,7 @@
 			$link->close();
 			?>
 
+
 			<?php
 			include '../includes/footer.php';
 			?>

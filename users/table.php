@@ -24,29 +24,41 @@
 			if ( $result->num_rows > 0 ) {
 				// output data of each row
 				while ( $row = $result->fetch_assoc() ) {
-					echo '<table class="table table-striped">
-				<thead class="thead bg-info text-light">
-					<tr>
-						<th scope="col">#</th>
-						<th scope="col">Navn</th>
-						<th scope="col">Rolle</th>
-					</tr>
-				</thead>
-				<tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>$row[ "username" ]</td>
-      <td>Otto</td>
-    </tr>
-				</tbody>
-			</table>';
+					
+					?>
+				
+						
+			<?php
 				}
 			} else {
 				echo "0 results";
 			}
 			$link->close();
 			?>
-
+<table class="table table-striped">
+ <thead class="thead bg-success" style="color: white">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Navn</th>
+      <th scope="col">Rolle</th>
+    </tr>
+  </thead>
+		<tbody>
+			
+<?php	  
+foreach($sql as $products) { 
+    echo '<tr><th scope="row">' . $num++ . '</th><td>' . $products->Navn . "</td>"; 
+    echo '<td>' . $products->Varenummer . '</td> '; 
+} 
+	  	  
+?>
+</table>
+			
+			
+			
+			
+			
+			
 			<hr>
 
 			<table class="table table-striped">
