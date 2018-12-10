@@ -13,6 +13,7 @@
 
 			<h2 class="text-center">Liste over brugere på denne side</h2>
 
+			
 			<?php
 			require_once( '../database-connect/dbcon.php' );
 
@@ -24,7 +25,7 @@
 			if ( $result->num_rows > 0 ) {
 				// output data of each row
 				while ( $row = $result->fetch_assoc() ) {
-					echo "Brugernavn: " . $row[ "username" ] . ' (Rolle)' . "<br>";
+					echo 'Brugernavn: ' . $row[ "username" ] . ' (Rolle)' . "<br>" . PHP_EOL;
 				}
 			} else {
 				echo "0 results";
@@ -32,10 +33,10 @@
 			$link->close();
 			?>
 
-
 			<?php
 			include '../includes/footer.php';
 			?>
 		</div>
+			
 	</body>
 </html>
