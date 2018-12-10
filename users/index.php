@@ -13,7 +13,7 @@
 
 			<h2 class="text-center">Liste over brugere på denne side</h2>
 
-			
+
 			<?php
 			require_once( '../database-connect/dbcon.php' );
 
@@ -37,6 +37,6 @@
 			include '../includes/footer.php';
 			?>
 		</div>
-			
+
 	</body>
 </html>
