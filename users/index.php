@@ -26,14 +26,16 @@
 				// output data of each row
 				while ( $row = $result->fetch_assoc() ) {
 					?>
-					Brugernavn: <?= $row[ "username" ] ?> (Rolle) <br><?php PHP_EOL;
+			<div class="text-center mb-3">Brugernavn:
+			<?= $row[ "username" ] ?>(Rolle) <br>
+			<?php PHP_EOL;
 				}
 			} else {
 				echo "0 results";
 			}
 			$link->close();
 			?>
-
+		</div>
 			<?php
 			include '../includes/footer.php';
 			?>

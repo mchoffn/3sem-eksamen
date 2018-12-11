@@ -5,8 +5,7 @@
 	include 'includes/special/head.php';
 	?>
 
-	<!--Redirect-->
-	<meta http-equiv="refresh" content="3; url=index.php"/>
+	
 
 </head>
 <style>
@@ -71,7 +70,6 @@
 </style>
 
 <body>
-	<div class="ani"></div>
 
 	<?php
 
@@ -94,15 +92,20 @@
 		if ( password_verify( $pw, $pwhash ) ) {
 		//echo 'Brugernavn og password passer med brugerid: '.$id.
 
-		echo '<div class="text-center">Brugernavn og password er korrekt. Gå til <a href="index.php">forsiden</a></div>' ?>
+		//echo '<div class="text-center">Brugernavn og password er korrekt. Gå til <a href="index.php">forsiden</a></div>' ?>
 
 	<?php
 		$_SESSION[ 'uid' ] = $id;
 		$_SESSION[ 'uname' ] = $un;
+		?>
+	<!--Redirect-->
+	<meta http-equiv="refresh" content="0.1; url=index.php"/>
+	<?php
+			
 		}
 	else {
-		echo 'Ugyldigt kombination af brugernavn/password. Gå tilbage til '
-		?><a href="create-user.php">login siden</a>
+		echo '<div class="text-center mt-3">Ugyldigt kombination af brugernavn/password. Gå tilbage til '
+	?><a href="create-user.php">login siden</a></div>
 		<?php
 		}
 
