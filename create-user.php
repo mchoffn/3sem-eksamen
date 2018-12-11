@@ -43,7 +43,6 @@
 
 	$pwhash = password_hash( $pw, PASSWORD_DEFAULT );
 
-
 	require_once( 'database-connect/dbcon.php' );
 
 	$sql = 'INSERT INTO ss_users (username, pwhash) VALUES (?, ?)';

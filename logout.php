@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+<?php
+	include 'includes/special/head.php';
+	?>
 </head>
 
 <body>
-	
 	<?php
 // Initialize the session.
 // If you are using session_name("something"), don't forget it now!
@@ -28,9 +28,10 @@ if (ini_get("session.use_cookies")) {
 // Finally, destroy the session.
 session_destroy();
 ?>
-	
-	<h2>You are now logged out</h2>
-	<a href="create-user.php">Go back to create user/login page</a>
+		<h2 class="text-center mt-3">Du er nu logget ud</h2>
+	<div class="text-center">
+		<a href="create-user.php"><button class="btn btn-primary">Gå tilbage til login siden</button></a>
+	</div>
 	
 </body>
 </html>

@@ -25,7 +25,8 @@
 			if ( $result->num_rows > 0 ) {
 				// output data of each row
 				while ( $row = $result->fetch_assoc() ) {
-					echo 'Brugernavn: ' . $row[ "username" ] . ' (Rolle)' . "<br>" . PHP_EOL;
+					?>
+					Brugernavn: <?= $row[ "username" ] ?> (Rolle) <br><?php PHP_EOL;
 				}
 			} else {
 				echo "0 results";

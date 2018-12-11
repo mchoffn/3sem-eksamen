@@ -3,9 +3,7 @@
 	<a class="navbar-brand" href="../index.php"><img src="../images/sunset-favicon.png" width="75"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-
-
+	</button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
@@ -13,14 +11,15 @@
 		session_start();
 		if(isset($_SESSION['uid'])){
 			echo $_SESSION['uname'];
-			
-		}
+		} else {
+					echo "Ikke logget ind" . '<a href="../create-user.php"><button class="btn btn-primary">Gå til login siden</button></a>';
+				}
 	
 	
 	?> (*role*)<span class="sr-only"></span></a>
-					<form action="../logout.php">
-						<button class="btn btn-outline-danger" type="submit">Logout</button>
-					</form>
+			<form action="../logout.php">
+				<button class="btn btn-outline-danger" type="submit">Logout</button>
+			</form>
 	</div>
 </nav>
 <!--Navbar end-->
