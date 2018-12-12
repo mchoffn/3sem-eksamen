@@ -53,7 +53,7 @@
 	$stmt->execute();
 
 	if ( $stmt->affected_rows > 0 ) {
-		echo 'Brugernavn ' . $un . ' oprettet';
+		echo 'Brugeren "' . $un . '" oprettet';
 	} else {
 		echo 'Kunne ikke oprette bruger med brugernavnet "' . $un . '", fordi at dette brugernavn allerede er taget.';
 	}
