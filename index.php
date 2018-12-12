@@ -21,7 +21,7 @@
 				<form class="mt-3" action="create-category.php" method="post" autocomplete="off">
 					<div class="form-input">
 						<div class="font-weight-bold input-txt">Titel: </div>
-						<input class="input-field" type="text" name="category_title" required>
+						<input class="input-field" type="text" name="category_title" autofocus required>
 					</div>
 					<br>
 					<div class="form-input">
@@ -50,21 +50,21 @@
 			require_once( 'database-connect/dbcon.php' );
 
 			//Showing all categories
-			$sql = "SELECT id AS cid, title, description, thumbnail FROM ss_category";
+			$sql = "SELECT id AS cid, title, description, thumbnail AS img FROM ss_category";
 			$result = $link->prepare( $sql );
 			
 			$result->execute();
-			$result->bind_result($cid, $title, $description, $thumbnail);
+			$result->bind_result($cid, $title, $description, $img);
 
 			while($result->fetch()){
 					?>
 			<div class="col"></div>
 			<div class="category-item col-xl-3 col-sm-12">
 
-				<h2>
+				<h2 class="d-inline">
 					<?= $title ?>
 				</h2>
-				<div class="delete">
+				<div class="delete d-inline float-right">
 					<form action="delete-category.php" method="post">
 						<input type="hidden" name="cid" value="<?=$cid?>">
 						<div class="delete-img">
@@ -75,11 +75,12 @@
 				<p>
 					<?= $description ?>
 				</p>
-				<a href="view-videos/"><img class="mb-3"
-					src="<?= $thumbnail ?>" height="300" width="300">
-				</img></a>
+				<a href="view-videos/">
+					<img class="mb-3" src="<?= $img ?>" height="300" width="300"></img>
+				</a>
 			</div>
 			<div class="col"></div>
+		
 			<?php
 
 			//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
