@@ -21,11 +21,11 @@
 	$stmt->bind_param( 'i', $cid );
 	$stmt->execute();
 	
-	echo 'Kategori slettet';
+	?><div class="text-center mt-3">Kategori slettet</div><?php
 	?>
 	
 	<br>
-		<a href="index.php">Tilbage til startsiden</a>
+		<div class="text-center mb-3"><a href="index.php">Tilbage til startsiden</a></div>
 	
 	<?php
 	include 'includes/special/footer.php';

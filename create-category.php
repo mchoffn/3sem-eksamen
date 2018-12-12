@@ -26,9 +26,10 @@
 		$stmt->execute();
 
 		if ( $stmt->affected_rows > 0 ) {
-			echo '<div class="text-center">Kategori ' . $ct . ' oprettet gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
+			?>
+			<div class="text-center mt-3 mb-3">Kategori "<?php echo $ct ?>" oprettet.<br> Gå tilbage til <a href="index.php">startsiden</a></div><?php PHP_EOL;
 		} else {
-			echo '<div class="text-center">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen "' . $ct . '" er allerede taget. Prøv en anden titel. Gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
+			?> <div class="text-center mt-3 mb-3">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen "<?php echo $ct ?>" er allerede taget. Prøv en anden titel.<br> Gå tilbage til <a href="index.php">startsiden</a></div><?php PHP_EOL;
 		}
 	
 		$link->close();
