@@ -13,8 +13,9 @@
 		?>
 		
 		<?php
-		if(isset($_SESSION['admin'])){
-			echo $_SESSION['uname'];
+		//virker ikke, se om user er admin
+		if(isset($_SESSION['admin=1'])){
+			echo 'admin';
 		} else {
 					?>ikke admin<?php
 				}
