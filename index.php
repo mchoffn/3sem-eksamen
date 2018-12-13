@@ -85,7 +85,7 @@
 				<p>
 					<?= $description ?>
 				</p>
-				<a href="view-videos/">
+				<a href="view-videos.php">
 					<img class="mb-3" src="<?= $img ?>" height="300" width="300"></img>
 				</a>
 			</div>
