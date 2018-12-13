@@ -22,7 +22,7 @@
 		</div>
 		<div class="row">
 			<div class="mx-auto">
-				<form class="mt-3" action="create-category.php" method="post" autocomplete="off">
+				<form class="mt-3" action="create-category.php" method="post" autocomplete="off" enctype="multipart/form-data">
 					<div class="form-input">
 						<div class="font-weight-bold input-txt">Titel: </div>
 						<input class="input-field" type="text" name="category_title" autofocus required>
@@ -41,7 +41,7 @@
 						<label class="custom-file-label" for="customFile">300x300 Forhåndsvisning (.png, .jpeg, .jpg)</label>
 					</div>
 					<br>
-					<input class="btn btn-primary btn-block" type="submit" value="Tilføj">
+					<input class="btn btn-primary btn-block" type="submit" name="btnaddcategory" value="Tilføj">
 				</form>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 			<div class="category-item col-xl-3 col-sm-12">
 				<h2>Title</h2>
 				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
+				<a href="view-videos.php"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
 			</div>
 
 			<div class="category-item col-xl-3 col-sm-12">
