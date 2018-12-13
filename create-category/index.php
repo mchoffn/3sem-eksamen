@@ -2,16 +2,15 @@
 <html>
 <head>
 <?php
-	include 'includes/special/head.php';
+	include '../includes/head.php';
 	?>
 </head>
 
 <body>
 	<?php
-		include 'includes/special/navbar.php';
+		include '../includes/navbar.php';
 		?>
 	<?php
-
 if(isset($_POST['btnaddcategory'])){
 	$maxsize = 80000000; // 80MB
 
@@ -64,7 +63,7 @@ if(isset($_POST['btnaddcategory'])){
 
 		?>
 	<?php
-		include 'includes/special/footer.php';
+		include '../includes/footer.php';
 		?>
 </body>
 </html>

@@ -8,16 +8,15 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
 			<a class="nav-link text-dark">Logget ind som: <?php
-		session_start();
 		if(isset($_SESSION['uid'])){
 			echo $_SESSION['uname'];
 		} else {
-					echo "Ikke logget ind" . '<a href="../create-user.php"><button class="btn btn-primary">Gå til login siden</button></a>';
+					?>"Ikke logget ind" <a href="create-user.php"><button class="btn btn-primary">Gå til login siden</button></a><?php
 				}
 	
 	
 	?> (*role*)<span class="sr-only"></span></a>
-			<form action="../logout.php">
+			<form action="../logout/index.php">
 				<button class="btn btn-outline-danger" type="submit">Logout</button>
 			</form>
 	</div>

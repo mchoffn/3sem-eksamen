@@ -20,7 +20,9 @@
 
 <body class="bg">
 	<div class="container-fluid">
-
+	<?php
+	include 'includes/special/navbar.php';
+	?>
 		<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
 			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
@@ -33,7 +35,7 @@
 				<input class="btn btn-outline-primary" type="submit" value="Opret bruger">
 			</form>
 			<br>
-			<form class="login mt-3" action="login.php" method="post">
+			<form class="login mt-3" action="login/index.php" method="post">
 				<h2 class="text-light">Login</h2>
 				<p class="text-light">Brugernavn</p>
 				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
@@ -44,11 +46,11 @@
 			</form>
 				</div>
 			</div>
-
 	</div>
 
 
 	<?php
+	
 	//Create user
 	$un = filter_input( INPUT_POST, 'un' )or die( 'Missing or illegal un parameter' );
 	$pw = filter_input( INPUT_POST, 'pw' )or die( 'Missing or illegal pw parameter' );
@@ -63,7 +65,7 @@
 	$stmt->execute();
 
 	if ( $stmt->affected_rows > 0 ) {
-		echo 'Brugernavn ' . $un . ' oprettet';
+		echo 'Brugeren "' . $un . '" oprettet';
 	} else {
 		echo 'Kunne ikke oprette bruger med brugernavnet "' . $un . '", fordi at dette brugernavn allerede er taget.';
 	}
