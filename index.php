@@ -2,32 +2,27 @@
 <html>
 <head>
 	<?php
-	include 'includes/special/head.php';
+	include 'includes/head.php';
 	?>
 </head>
 
 <body>
 	<div class="container-fluid">
 		<?php
-		include 'includes/special/navbar.php';
-		?>
-		
-		<?php
-		//virker ikke, se om user er admin
-		if(isset($_SESSION['admin=1'])){
-			echo 'admin';
-		} else {
-					?>ikke admin<?php
-				}
+		include 'includes/navbar.php';
 		?>
 
+		<?php
+		if(isset($_SESSION['role'])){
+			?>
+		
 		<!--Add new category-->
 		<div class="row">
 			<h2 class="mx-auto mt-3">Tilføj ny katagori</h2>
 		</div>
 		<div class="row">
 			<div class="mx-auto">
-				<form class="mt-3" action="create-category/index.php" method="post" autocomplete="off">
+				<form class="mt-3" action="create-category.php" method="post" autocomplete="off">
 					<div class="form-input">
 						<div class="font-weight-bold input-txt">Titel: </div>
 						<input class="input-field" type="text" name="category_title" autofocus required>
@@ -50,6 +45,12 @@
 				</form>
 			</div>
 		</div>
+		
+		<?php
+		} else {
+			
+		}
+		?>
 
 		<h2 class="text-center mt-3">Kategorier:</h2>
 
@@ -74,7 +75,7 @@
 					<?= $title ?>
 				</h2>
 				<div class="delete d-inline float-right">
-					<form action="delete-category/index.php" method="post">
+					<form action="delete-category.php" method="post">
 						<input type="hidden" name="cid" value="<?=$cid?>">
 						<div class="delete-img">
 							<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
@@ -96,7 +97,7 @@
 			}
 			
 
-			//$link->close();
+			$link->close();
 			?>
 		</div>
 		<!--End category container-->
@@ -125,7 +126,7 @@
 		</div>
 
 		<?php
-		include 'includes/special/footer.php';
+		include 'includes/footer.php';
 		?>
 	</div>
 </body>

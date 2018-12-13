@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php
-	include '../includes/head.php';
+	include 'includes/head.php';
 	?>
 </head>
 
@@ -13,13 +13,13 @@
 	$pw = filter_input( INPUT_POST, 'pw' )or die( 'Missing or illegal pw parameter' );
 
 
-	require_once( '../database-connect/dbcon.php' );
+	require_once( 'database-connect/dbcon.php' );
 
-	$sql = 'SELECT id, pwhash FROM ss_users WHERE username=?';
+	$sql = 'SELECT id, pwhash, role FROM ss_users WHERE username=?';
 	$stmt = $link->prepare( $sql );
 	$stmt->bind_param( 's', $un );
 	$stmt->execute();
-	$stmt->bind_result( $id, $pwhash );
+	$stmt->bind_result( $id, $pwhash, $role );
 
 	while ( $stmt->fetch() ) {}
 
@@ -27,42 +27,30 @@
 		//echo 'Brugernavn og password passer med brugerid: '.$id.
 
 		//echo '<div class="text-center">Brugernavn og password er korrekt. Gå til <a href="index.php">forsiden</a></div>'
+		$_SESSION[ 'uid' ] = $id;
+		$_SESSION[ 'uname' ] = $un;
+
+		//admin
+		if ( $role == '1' ) {
+			$_SESSION[ 'role' ] = $role;
+		}
 		?>
-
-	<?php
-	$_SESSION[ 'uid' ] = $id;
-	$_SESSION[ 'uname' ] = $un;
-	?>
-
-
+	
 	<!--Redirect-->
-	<meta http-equiv="refresh" content="0.1; url=../index.php"/>
+	<meta http-equiv="refresh" content="0.1; url=index.php"/>
 	<?php
 
 	} else {
 		echo '<div class="text-center mt-3">Ugyldigt kombination af brugernavn/password. Gå tilbage til '
-		?><a href="../create-user.php">login siden</a>
+		?><a href="create-user.php">login siden</a>
 	</div>
 	<?php
 	}
 
+	$link->close();
+	?>
 
-	?>
-	
-	<?php
-	//admin
-	$sql = 'SELECT admin FROM ss_users';
-	$stmt = $link->prepare( $sql );
-	$stmt->bind_param( 'i', $admin );
-	$stmt->execute();
-	$stmt->bind_result( $admin );
 
-	while ( $stmt->fetch() ) {}
-	?>
-	<?php
-	$_SESSION[ 'admin' ] = $admin;
-	?>
-	
 
 </body>
 </html>

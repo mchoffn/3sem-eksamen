@@ -1,15 +1,15 @@
-<!doctype html>
+s<!doctype html>
 <html>
 <head>
 	<?php
-	include 'includes/special/head.php';
+	include 'includes/head.php';
 	?>
 </head>
 
 <body>
 	<div class="container-fluid">
 	<?php
-	include 'includes/special/navbar.php';
+	include 'includes/navbar.php';
 	?>
 		<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
@@ -23,7 +23,7 @@
 				<input class="btn btn-outline-primary" type="submit" value="Opret bruger">
 			</form>
 			<br>
-			<form class="login mt-3" action="login/index.php" method="post">
+			<form class="login mt-3" action="login.php" method="post">
 				<h2 class="text-light">Login</h2>
 				<p class="text-light">Brugernavn</p>
 				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
@@ -57,7 +57,12 @@
 	} else {
 		echo 'Kunne ikke oprette bruger med brugernavnet "' . $un . '", fordi at dette brugernavn allerede er taget.';
 	}
-
+	
+	$link->close();
+	?>
+	
+	<?php
+	include 'includes/footer.php';
 	?>
 </body>
 </html>
