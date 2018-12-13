@@ -15,6 +15,21 @@
 			<?php
 		if(isset($_SESSION['role'])){
 			?>
+			
+			
+			<div class="form-container mx-auto border-0 pb-3">
+			<div class="row justify-content-center">
+			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
+				<h2 class="">Opret bruger</h2>
+				<p class="">Brugernavn</p>
+				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
+				<p class="">Password</p>
+				<input class="border-0 p-2 rounded mb-3" type="password" autocomplete="off" name="pw" placeholder="Password" required>
+				<br>
+				<input class="btn btn-outline-primary" type="submit" value="Opret bruger">
+			</form>
+				</div>
+			</div>
 
 			<h2 class="text-center">Liste over brugere på denne side</h2>
 
@@ -39,7 +54,7 @@
 							<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
 						</div>
 					</form>
-				</div>(Rolle) <br>
+				</div><br>
 			<?php PHP_EOL;
 				}
 			} else {

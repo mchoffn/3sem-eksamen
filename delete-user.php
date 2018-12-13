@@ -26,7 +26,7 @@
 	?>
 	
 	<br>
-		<div class="text-center mb-3"><a href="users.php">Tilbage til liste over brugere</a></div>
+		<div class="text-center mb-3"><a href="admin-panel.php">Tilbage til admin panel</a></div>
 	
 	<?php
 	include 'includes/footer.php';

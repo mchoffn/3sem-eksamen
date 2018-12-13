@@ -11,13 +11,14 @@
 		if(isset($_SESSION['uid'])){
 			echo $_SESSION['uname'];
 		} else {
-					?>"Ikke logget ind" <a href="create-user.php"><button class="btn btn-primary">Gå til login siden</button></a><?php
+					?><?php
 				}
 	
 	
 	?> <?php
 		if(isset($_SESSION['role'])){
 			echo '(Administrator)';
+				?><a href="admin-panel.php"><button class="btn btn-info mr-3">Admin panel</button></a><?php
 		} else {
 			echo '(Bruger)';
 		}

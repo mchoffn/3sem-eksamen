@@ -75,12 +75,22 @@
 					<?= $title ?>
 				</h2>
 				<div class="delete d-inline float-right">
+					
+					<?php
+		if(isset($_SESSION['role'])){
+			?>
 					<form action="delete-category.php" method="post">
 						<input type="hidden" name="cid" value="<?=$cid?>">
 						<div class="delete-img">
 							<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
 						</div>
 					</form>
+					<?php
+					} else {
+			?><?php
+		}
+		?>
+					
 				</div>
 				<p>
 					<?= $description ?>
