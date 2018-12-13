@@ -37,7 +37,7 @@
 					</div>
 					<br>
 					<div class="custom-file mb-3">
-						<input type="file" accept="image/png, image/jpeg, image/jpg" name="btnaddcategory" class="form-control-file" id="customFile" required>
+						<input type="file" accept="image/png, image/jpeg, image/jpg" name="category_thumbnail" class="form-control-file" id="customFile" required>
 						<label class="custom-file-label" for="customFile">300x300 Forhåndsvisning (.png, .jpeg, .jpg)</label>
 					</div>
 					<br>

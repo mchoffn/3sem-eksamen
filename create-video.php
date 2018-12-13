@@ -32,11 +32,7 @@
                         else  {
                                 // Upload
                                 if(move_uploaded_file($_FILES['video_title']['tmp_name'],$target_file)){
-                                // Insert record
-                                $query = 'INSERT INTO ss_videos(title, description) VALUES (?,?)';
-
-
-                                //Create video
+                            
                                     $vt = filter_input( INPUT_POST, 'video_title' )or die( 'Missing or illegal category title parameter' );
                                     $vd = filter_input( INPUT_POST, 'video_description' )or die( 'Missing or illegal category description parameter' );
                                     $video = $target_file;
@@ -45,15 +41,15 @@
 
 
 
-                            $query = 'INSERT INTO ss_videos(title, description, location) VALUES (?,?,?)';
-                            $stmt = $link->prepare( $query );
+                            $sql = 'INSERT INTO ss_videos(title, description, location) VALUES (?,?,?)';
+                            $stmt = $link->prepare( $sql );
                             $stmt->bind_param( 'sss', $vt, $vd, $video );
                             $stmt->execute();
 
 
 
                             if ( $stmt->affected_rows > 0 ) {
-                                echo '<div class="text-center">Kategori ' . $ct . ' oprettet gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
+                                echo '<div class="text-center">Kategori ' . $vt . ' oprettet gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
                             } else {
                                 echo '<div class="text-center">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen "' . $ct . '" er allerede taget. Prøv en anden titel. Gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
                             }

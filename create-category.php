@@ -11,14 +11,13 @@
 		include 'includes/navbar.php';
 		?>
 	<?php
-
 if(isset($_POST['btnaddcategory'])){
 	$maxsize = 80000000; // 80MB
 	
 	//print_r($_POST);
 
 	$name = $_FILES['category_thumbnail']['name'];
-	$target_dir = "ss_category";
+	$target_dir = "ss_category/";
 	$target_file = $target_dir . $_FILES["category_thumbnail"]["name"];
 
 	// Select file type
@@ -36,14 +35,7 @@ if(isset($_POST['btnaddcategory'])){
 		} else {
 			// Upload
 			if(move_uploaded_file($_FILES['category_thumbnail']['tmp_name'],$target_file)){
-				// Insert record
 				
-				
-				
-				
-
-				//Create category on its own page to fix page refresh sending form.
-				//Create category
 				$ct = filter_input( INPUT_POST, 'category_title' )or die( 'Missing or illegal category title parameter' );
 				$cd = filter_input( INPUT_POST, 'category_description' )or die( 'Missing or illegal category description parameter' );
 				$ctn = $target_file;
