@@ -33,6 +33,9 @@
 				</div>
 			</div>
 			
+			<?php
+		if(isset($_SESSION['role'])){
+				?>
 			<!--add new video-->
 			<div class="row">
 			<h2 class="mx-auto mt-3">Tilføj ny video</h2>
@@ -59,11 +62,16 @@
 				</form>
 			</div>
 		</div>
-			</div>
+			
+		<?php
+			}
+		else {
+			
+		}
+		?>
 			<?php
 			include 'includes/footer.php';
 		?>
-		
-	</div>
+		</div>
 </body>
 </html>
