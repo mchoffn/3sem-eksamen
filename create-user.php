@@ -4,9 +4,21 @@
 	<?php
 	include 'includes/special/head.php';
 	?>
+<style>
+
+	.bg {
+		background-image: url("images/milky-way-2695569_960_720.jpg");
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+</style>
+
 </head>
 
-<body>
+<body class="bg">
 	<div class="container-fluid">
 
 		<div class="form-container mx-auto border-0 pb-3">
