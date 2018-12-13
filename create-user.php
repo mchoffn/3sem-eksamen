@@ -4,9 +4,21 @@ s<!doctype html>
 	<?php
 	include 'includes/head.php';
 	?>
+<style>
+
+	.bg {
+		background-image: url("images/milky-way-2695569_960_720.jpg");
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+</style>
+
 </head>
 
-<body>
+<body class="bg">
 	<div class="container-fluid">
 	<?php
 	include 'includes/navbar.php';

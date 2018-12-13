@@ -39,7 +39,7 @@
 		</div>
 		<div class="row">
 			<div class="mx-auto">
-				<form class="mt-3" action="" autocomplete="off">
+				<form class="mt-3" method="post" action="create-video.php" autocomplete="off">
 					<div class="form-input">
 						<div class="font-weight-bold input-txt">Titel: </div>
 						<input class="input-field" type="text" name="video_title" required>
@@ -55,7 +55,7 @@
   <label class="custom-file-label" for="customFile">Vælg video (.mp4)</label>
 </div>
 					<br>
-					<input class="btn btn-primary btn-block" type="submit" value="Tilføj">
+					<input class="btn btn-primary btn-block" name="btnaddvideo" type="submit" value="Tilføj">
 				</form>
 			</div>
 		</div>

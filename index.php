@@ -13,9 +13,18 @@
 		?>
 
 		<?php
+		//virker ikke, se om user er admin
+		if(isset($_SESSION['admin=1'])){
+			echo 'admin';
+		} else {
+					?>ikke admin<?php
+				}
+		?>
+
+		<?php
 		if(isset($_SESSION['role'])){
 			?>
-		
+
 		<!--Add new category-->
 		<div class="row">
 			<h2 class="mx-auto mt-3">Tilføj ny katagori</h2>
@@ -41,14 +50,14 @@
 						<label class="custom-file-label" for="customFile">300x300 Forhåndsvisning (.png, .jpeg, .jpg)</label>
 					</div>
 					<br>
-					<input class="btn btn-primary btn-block" type="submit" value="Tilføj">
+					<input class="btn btn-primary btn-block" type="submit" name="btnaddcategory" value="Tilføj">
 				</form>
 			</div>
 		</div>
-		
+
 		<?php
 		} else {
-			
+
 		}
 		?>
 
@@ -62,7 +71,7 @@
 			//Showing all categories
 			$sql = "SELECT id AS cid, title, description, thumbnail AS img FROM ss_category";
 			$result = $link->prepare( $sql );
-			
+
 			$result->execute();
 			$result->bind_result($cid, $title, $description, $img);
 
@@ -90,12 +99,12 @@
 				</a>
 			</div>
 			<div class="col"></div>
-		
+
 			<?php
 
 			//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
 			}
-			
+
 
 			$link->close();
 			?>
