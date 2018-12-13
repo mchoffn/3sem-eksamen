@@ -11,11 +11,12 @@
 		include 'includes/navbar.php';
 		?>
 	<?php
+
 if(isset($_POST['btnaddcategory'])){
 	$maxsize = 80000000; // 80MB
 
 	$name = $_FILES['category_thumbnail']['name'];
-	$target_dir = "ss_category/";
+	$target_dir = "ss_category";
 	$target_file = $target_dir . $_FILES["category_thumbnail"]["name"];
 
 	// Select file type
