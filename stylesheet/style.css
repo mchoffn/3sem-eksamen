@@ -18,6 +18,10 @@ html {
   margin-left: 0;
 }
 
+p {
+  margin-bottom: inherit;
+}
+
 /*Add new catagory page*/
 .form-input {
   display: -webkit-box;
@@ -49,10 +53,6 @@ html {
 
 .media-body {
   width: 100%;
-}
-
-#tilfojvideo {
-  background-color: aqua;
 }
 
 body {
@@ -140,7 +140,3 @@ body {
 }
 
 /*Login*/
-
-#tilfojvideo {
-  background-color: #12502e;
-}
