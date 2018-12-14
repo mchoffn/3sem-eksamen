@@ -51,6 +51,10 @@ html {
   width: 100%;
 }
 
+#tilfojvideo {
+  background-color: aqua;
+}
+
 body {
   background: #eee !important;
 }
@@ -136,3 +140,7 @@ body {
 }
 
 /*Login*/
+
+#tilfojvideo {
+  background-color: #12502e;
+}
