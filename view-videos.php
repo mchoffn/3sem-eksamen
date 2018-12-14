@@ -13,7 +13,7 @@
 			<h2 class="text-center mt-3">Videoer:</h2>
 				<!-- Start video container -->
 		<div class="row d-flex justify-content-around mt-3">
-																
+				
 							<!--Showing all videos -->
 			<div class="col-xl-4 col-sm-12 mb-3">
 									<?php
@@ -24,10 +24,8 @@
 									$stmt->bind_result($vid, $title, $description, $location);
 									$stmt->execute();
 									while ($stmt->fetch()) {
-										echo "<video src='".$location."' controls width='320px' height='200px' >";
 										
-										 
-									}
+									
 										?>
 					
 		<div class="col">
@@ -37,16 +35,12 @@
 
 					<h2 class="d-inline">
 				<?= $title ?>
-		</h2>
-				<p>
-				<?= $description ?>
-				</p>
-		</h2>
-							
-		<?php
+				<?php
 				if(isset($_SESSION['role'])){
 							?>
-			<div class="delete d-inline float-right">
+			
+					
+				<div class="delete d-inline float-right">
 			<form action="delete-video.php" method="post">
 				<input type="hidden" name="vid" value="<?=$vid?>">
 						<div class="delete-img">
@@ -54,6 +48,21 @@
 								</div>
 				</form>
 			</div>
+				<?php } ?>
+		</h2>
+				<p>
+				<?= $description ?>
+				</p>
+				<?php echo "<div >";
+										echo "<video src='".$location."' controls width='320px' height='200px' >";
+										echo "</div>"; 
+										?>
+										</h2>
+							
+		<?php
+				if(isset($_SESSION['role'])){
+							?>
+			
 					<?php
 					} else {
 																							
@@ -69,7 +78,7 @@
 			//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
 			
 
-
+			}
 			$link->close();
 			?>
 
