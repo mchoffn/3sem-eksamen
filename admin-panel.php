@@ -12,10 +12,10 @@
 			<?php
 			include 'includes/navbar.php';
 			?>
+			
 			<?php
 		if(isset($_SESSION['role'])){
 			?>
-			
 			
 			<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
@@ -47,31 +47,31 @@
 				// output data of each row
 				while ( $result->fetch() ) {
 					?>
-			<div class="text-center mb-3 col-xl-2 mx-auto">Brugernavn:
+			<div class="row text-center mb-3 col-xl-2 mx-auto">Brugernavn:
 			<?= $username ?>
-				<div class="d-inline float-right">
-					<form action="delete-user.php" method="post">
-						<input type="hidden" name="userid" value="<?= $userid ?>">
-						<div class="delete-img">
-							<button class="btn btn-info mr-3">Slet bruger</button>
-						</div>
-					</form>
-				</div>
-				
-				<div class="d-inline float-right">
+				<div class="d-inline float-right mb-3">
 					<form action="make-admin.php" method="post">
 						<input type="hidden" name="userid" value="<?= $userid ?>">
 						<div class="delete-img">
-							<button class="btn btn-info mr-3">Admin panel</button>
+							<button class="btn btn-primary mr-3">Lav bruger til admin</button>
 						</div>
 					</form>
 				</div>
 				
-				<div class="d-inline float-right">
+				<div class="d-inline float-right mb-3">
 					<form action="remove-admin.php" method="post">
 						<input type="hidden" name="userid" value="<?= $userid ?>">
 						<div class="delete-img">
-							<button class="btn btn-info mr-3">Admin panel</button>
+							<button class="btn btn-primary mr-3">Fjern administrator rettigheder</button>
+						</div>
+					</form>
+				</div>
+				
+				<div class="d-inline float-right mb-3">
+					<form action="delete-user.php" method="post">
+						<input type="hidden" name="userid" value="<?= $userid ?>">
+						<div class="delete-img">
+							<button class="btn btn-danger mr-3">Slet bruger</button>
 						</div>
 					</form>
 				</div>
@@ -81,17 +81,15 @@
 				}
 
 			$link->close();
-			?>
-				
-				
+			?>		
 		
-			
-		
-<?php
+		<?php
 		} else {
-			?><h2 class="text-center mt-3">Denne side er kun for administratorer</h2><?php
+			?><h2 class="text-center mt-3">Denne side er kun for administratorer</h2><br>
+			<div class="text-center mb-3"><a href="front-page.php">Gå tilbage til startsiden</a></div><?php
 		}
 		?>
+			
 			<?php
 			include 'includes/footer.php';
 			?>
