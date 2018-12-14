@@ -62,7 +62,6 @@
 							$link->close();
 							?>
 						</div>
-					</div>
 				</div>
 			</div>
 			</div>
@@ -75,7 +74,7 @@
 			</div>
 			<br>
 
-			<!-- dette er kassen med oprettelse af nye vidoer-->
+			<!-- new video-->
 			<div class="row border" id="tilfojvideo">
 				<div class="mx-auto">
 					<form class="" method="post" action="create-video.php" autocomplete="off" enctype="multipart/form-data">
