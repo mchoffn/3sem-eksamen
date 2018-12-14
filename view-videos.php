@@ -63,7 +63,8 @@
 							?>
 						</div>
 				</div>
-			
+			</div>
+			</div>
 			<?php
 			if ( isset( $_SESSION[ 'role' ] ) ) {
 				?>
@@ -107,5 +108,6 @@
 			include 'includes/footer.php';
 			?>
 		</div>
+		
 	</body>
 </html>
