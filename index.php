@@ -6,24 +6,28 @@
 	?>
 
 </head>
-
-<body class="bg">
-	<div class="container-fluid">
-
-		<div class="form-container mx-auto border-0 pb-3">
-			<div class="row justify-content-center">
-			<form class="login mt-3" action="login.php" method="post">
-				<h2 class="text-light">Login</h2>
-				<p class="text-light">Brugernavn</p>
-				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
-				<p class="text-light">Password</p>
-				<input class="border-0 p-2 rounded mb-3" type="password" autocomplete="off" name="pw" placeholder="Password" required>
-				<br>
-				<input class="btn btn-outline-success" type="submit" value="Log ind">
-			</form>
-				</div>
-			</div>
+<div class="container">
+	<div class="row">
+		<div class="mx-auto">
+			<h1 class="form-signin-heading">Lean Up</h1>
+			<img class="pic" class="center" src="images/book.png">
+		</div>
 	</div>
+</div>
+	
+	
+
+  <div class="wrapper">
+    <form class="form-signin" action="login.php" method="post">       
+      <h2 class="form-signin-heading">Medlem</h2>
+      <input type="text" class="form-control" name="un" placeholder="Brugernavn" required="" autofocus="" />
+      <input type="password" class="form-control" name="pw" placeholder="Password" required=""/>      
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Log ind">Login</button>   
+    </form>
+  </div>
+
+	
 	<?php
 	include 'includes/footer.php';
 	?>
