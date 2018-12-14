@@ -30,7 +30,7 @@
 		$_SESSION[ 'uid' ] = $id;
 		$_SESSION[ 'uname' ] = $un;
 
-		//admin
+		//admin=1, nonadmin=0. Checks session if user is set to 1. Used to show only admin panel.
 		if ( $role == '1' ) {
 			$_SESSION[ 'role' ] = $role;
 		}

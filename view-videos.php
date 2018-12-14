@@ -20,9 +20,9 @@
 					<?php
 			require_once( 'database-connect/dbcon.php' );
 
-			$sql = 'SELECT location FROM ss_videos ORDER BY id DESC';
+			$sql = 'SELECT location, title, description, id FROM ss_videos ORDER BY id DESC';
 			$stmt = $link->prepare($sql);
-			$stmt->bind_result($locat);
+			$stmt->bind_result( $locat, $title, $description, $vid );
 			$stmt->execute();
 			while ($stmt->fetch()) {
 			 echo "<div >";
@@ -38,7 +38,7 @@
 				</h2>
 				<div class="delete d-inline float-right">
 					<form action="" method="post">
-						<input type="hidden" name="cid" value="<?=$cid?>">
+						<input type="hidden" name="cid" value="<?=$vid?>">
 						<div class="delete-img">
 							<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
 						</div>
@@ -47,9 +47,7 @@
 				<p>
 					<?= $description ?>
 				</p>
-				<a href="view-videos.php">
-					<img class="mb-3" src="<?= $img ?>" height="300" width="300"></img>
-				</a>
+				
 			</div>
 			<div class="col"></div>
 
