@@ -13,7 +13,6 @@
 
 			<h2 class="text-center mt-3">Videoer:</h2>
 			<!-- Start video container -->
-			
 
 				<!--Showing all videos -->
 					<?php
@@ -27,7 +26,7 @@
 						?>
 
 					<div class="col border border-primary">
-						<div class="category-item col-xl-3 col-sm-12">
+						<div class="category-item mx-auto col-xl-3 col-sm-12">
 							<h2 class="d-inline">
 								<?= $title ?>
 							</h2>
@@ -62,7 +61,6 @@
 							$link->close();
 							?>
 						</div>
-				</div>
 			</div>
 			</div>
 			<?php
