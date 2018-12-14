@@ -12,6 +12,10 @@
 	?>
 	
 	<?php
+		if(isset($_SESSION['role'])){
+			?>
+	
+	<?php
 	$userid = filter_input(INPUT_POST, 'userid', FILTER_VALIDATE_INT) or die('Missing or illegal id parameter');
 	
 	require_once( 'database-connect/dbcon.php' );
@@ -29,6 +33,13 @@
 	
 	<br>
 		<div class="text-center mb-3"><a href="admin-panel.php">Tilbage til admin panel</a></div>
+	
+	<?php
+		} else {
+			?><h2 class="text-center mt-3">Denne side er kun for administratorer</h2><br>
+			<div class="text-center mb-3"><a href="front-page.php">Gå tilbage til startsiden</a></div><?php
+		}
+		?>
 	
 	<?php
 	include 'includes/footer.php';
