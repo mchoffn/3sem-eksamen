@@ -25,13 +25,9 @@
 					$stmt->bind_result( $vid, $title, $description, $location );
 					$stmt->execute();
 					while ( $stmt->fetch() ) {
-
-
 						?>
 
 					<div class="col border border-primary">
-
-
 						<div class="category-item col-xl-3 col-sm-12">
 							<h2 class="d-inline">
 								<?= $title ?>
@@ -48,7 +44,6 @@
 									</form>
 								</div>
 									<?php } else {
-
 							}
 							?>
 							<p>
@@ -64,16 +59,13 @@
 
 							//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
 
-
 							}
 							$link->close();
 							?>
 						</div>
 					</div>
 				</div>
-			</div>
-
-
+			
 			<?php
 			if ( isset( $_SESSION[ 'role' ] ) ) {
 				?>
