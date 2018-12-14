@@ -18,6 +18,10 @@ html {
   margin-left: 0;
 }
 
+p {
+  margin-bottom: inherit;
+}
+
 /*Add new catagory page*/
 .form-input {
   display: -webkit-box;
@@ -49,18 +53,6 @@ html {
 
 .media-body {
   width: 100%;
-}
-
-.tilfojvideo {
-  background-color: darkgreen;
-}
-
-.texttilfoj {
-  color: darkgreen;
-}
-
-.inputtitel {
-  margin-top: 15px;
 }
 
 body {

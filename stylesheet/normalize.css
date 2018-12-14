@@ -13,3 +13,6 @@ html {
 .row {
   margin-right: 0;
   margin-left: 0; }
+
+p {
+  margin-bottom: inherit; }
