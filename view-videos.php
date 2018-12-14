@@ -9,28 +9,30 @@
 		<?php
 			include 'includes/navbar.php';
 		?>
-		<div class="container mt-3 mb-3">
-			<div class="row">
+		
+			<h2 class="text-center mt-3">Vidoer:</h2>
+				<!-- Start video container -->
+		<div class="row d-flex justify-content-around mt-3">
 				
-				
-
+				<!--Showing all videos -->
 				<div class="col-xl-4 col-sm-12 mb-3">
-					<div class="font-weight-bold">vid-title</div>
-					
 					<?php
-			require_once( 'database-connect/dbcon.php' );
+				require_once( 'database-connect/dbcon.php' );
 
-			$sql = 'SELECT location, title, description, id FROM ss_videos ORDER BY id DESC';
-			$stmt = $link->prepare($sql);
-			$stmt->bind_result( $locat, $title, $description, $vid );
-			$stmt->execute();
-			while ($stmt->fetch()) {
-			 echo "<div >";
-			 echo "<video src='".$locat."' controls width='320px' height='200px' >";
-			 echo "</div>";
-		   }
+				$sql = 'SELECT id as vid, title, description, location FROM ss_videos ORDER BY id DESC';
+				$stmt = $link->prepare($sql);
+				$stmt->bind_result($vid, $title, $description, $location);
+				$stmt->execute();
+				while ($stmt->fetch()) {
+				 echo "<div >";
+				 echo "<video src='".$location."' controls width='320px' height='200px' >";
+				 echo "</div>";
+		 		  }
 					?>
-			<div class="col"></div>
+					
+			<div class="col">
+			
+			</div>
 			<div class="category-item col-xl-3 col-sm-12">
 
 				<h2 class="d-inline">

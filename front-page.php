@@ -112,27 +112,7 @@
 		<!--End category container-->
 
 		<!--New row-->
-		<div class="row d-flex justify-content-around mt-3">
-			<div class="col"></div>
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos.php"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-
-			<div class="category-item col-xl-3 col-sm-12">
-				<h2>Title</h2>
-				<p>Description</p>
-				<a href="view-videos/"><img class="mb-3" src="https://via.placeholder.com/300x300"></a>
-			</div>
-			<div class="col"></div>
-		</div>
+		
 
 		<?php
 		include 'includes/footer.php';

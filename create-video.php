@@ -8,9 +8,7 @@
  
     if(isset($_POST['btnaddvideo'])){
        $maxsize = 80000000; // 80MB
-        
-
-        print_r($_POST);
+    
 
        $name = $_FILES['video_title']['name'];
        $target_dir = "ss_videos/";
@@ -46,17 +44,16 @@
                             $stmt->bind_param( 'sss', $vt, $vd, $video );
                             $stmt->execute();
 
-
-
                             if ( $stmt->affected_rows > 0 ) {
-                                echo '<div class="text-center">Kategori ' . $vt . ' oprettet gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
+                                ?><div class="text-center mt-3 mb-3">Video "<?= $vt ?>" oprettet.<br> Gå tilbage til <a href="view-videos.php">video siden</a></div>
+                <?php
                             } else {
-                                echo '<div class="text-center">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen "' . $ct . '" er allerede taget. Prøv en anden titel. Gå tilbage til <a href="index.php">startsiden</a></div>' . PHP_EOL;
+                                ?><div class="text-center mt-3 mb-3">Fejl upstået under tilføjelse af ny video. En titel skal være unik og titlen "<?= $vt ?>" er allerede taget. Prøv en anden titel.<br>Gå tilbage til <a href="view-videos.php">video siden</a></div><?php
                             }
 
                             $link->close();
         
-                 }
+                 }  
             }
        }
   } 
