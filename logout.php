@@ -30,7 +30,7 @@ session_destroy();
 ?>
 		<h2 class="text-center mt-3">Du er nu logget ud</h2>
 	<div class="text-center">
-		<a href="create-user.php"><button class="btn btn-primary">Gå tilbage til login siden</button></a>
+		<a href="index.php"><button class="btn btn-primary">Gå tilbage til login siden</button></a>
 	</div>
 	
 </body>

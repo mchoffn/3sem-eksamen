@@ -21,8 +21,10 @@
 	$stmt->bind_param( 'i', $userid );
 	$stmt->execute();
 	
-	?><div class="text-center mt-3">Bruger <?php $un ?> slettet</div><?php
 	$link->close();
+	
+	?><div class="text-center mt-3">Bruger med id "<?= $userid ?>" slettet</div><?php
+	
 	?>
 	
 	<br>

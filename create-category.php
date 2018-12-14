@@ -48,10 +48,10 @@ if(isset($_POST['btnaddcategory'])){
 				$stmt->execute();
 
 				if ( $stmt->affected_rows > 0 ) {
-					?><div class="text-center">Kategori <?= $ct ?> oprettet gå tilbage til <a href="index.php">startsiden</a></div>
+					?><div class="text-center mt-3 mb-3">Kategori "<?= $ct ?>" oprettet.<br> Gå tilbage til <a href="front-page.php">startsiden</a></div>
 	<?php
 				} else {
-					?><div class="text-center">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen <?= $ct ?> er allerede taget. Prøv en anden titel. Gå tilbage til <a href="index.php">startsiden</a></div><?php;
+					?><div class="text-center mt-3 mb-3">Fejl upstået under tilføjelse af ny kategori. En titel skal være unik og titlen "<?= $ct ?>" er allerede taget. Prøv en anden titel.<br>Gå tilbage til <a href="front-page.php">startsiden</a></div><?php
 				}
 
 				$link->close();

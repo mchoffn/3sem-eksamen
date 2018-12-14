@@ -26,7 +26,7 @@
 	?>
 	
 	<br>
-		<div class="text-center mb-3"><a href="index.php">Tilbage til startsiden</a></div>
+		<div class="text-center mb-3"><a href="front-page.php">Tilbage til startsiden</a></div>
 	
 	<?php
 	include 'includes/footer.php';

@@ -37,12 +37,12 @@
 		?>
 	
 	<!--Redirect-->
-	<meta http-equiv="refresh" content="0.1; url=index.php"/>
+	<meta http-equiv="refresh" content="0.1; url=front-page.php"/>
 	<?php
 
 	} else {
 		echo '<div class="text-center mt-3">Ugyldigt kombination af brugernavn/password. Gå tilbage til '
-		?><a href="create-user.php">login siden</a>
+		?><a href="index.php">login siden</a>
 	</div>
 	<?php
 	}
