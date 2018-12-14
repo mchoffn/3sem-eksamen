@@ -51,8 +51,16 @@ html {
   width: 100%;
 }
 
-#tilfojvideo {
-  background-color: aqua;
+.tilfojvideo {
+  background-color: darkgreen;
+}
+
+.texttilfoj {
+  color: darkgreen;
+}
+
+.inputtitel {
+  margin-top: 15px;
 }
 
 body {
@@ -140,7 +148,3 @@ body {
 }
 
 /*Login*/
-
-#tilfojvideo {
-  background-color: #12502e;
-}
