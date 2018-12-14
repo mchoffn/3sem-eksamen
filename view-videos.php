@@ -27,7 +27,7 @@
 						?>
 
 					<div class="col border border-primary">
-						<div class="category-item col-xl-3 col-sm-12">
+						<div class="category-item mx-auto col-xl-3 col-sm-12">
 							<h2 class="d-inline">
 								<?= $title ?>
 							</h2>
