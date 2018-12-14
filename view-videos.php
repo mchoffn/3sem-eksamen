@@ -9,7 +9,7 @@
 		<?php
 			include 'includes/navbar.php';
 		?>
-		<div class="container mt-3 mb-3">
+		<div class="container-fluid">
 			<div class="row">
 				
 				
@@ -36,6 +36,10 @@
 				<h2 class="d-inline">
 					<?= $title ?>
 				</h2>
+				
+				<?php
+		if(isset($_SESSION['role'])){
+			?>
 				<div class="delete d-inline float-right">
 					<form action="" method="post">
 						<input type="hidden" name="cid" value="<?=$vid?>">
@@ -44,6 +48,12 @@
 						</div>
 					</form>
 				</div>
+			<?php
+		} else {
+			
+		}
+		?>
+				
 				<p>
 					<?= $description ?>
 				</p>
@@ -95,7 +105,7 @@
   <label class="custom-file-label" for="customFile">Vælg video (.mp4)</label>
 </div>
 					<br>
-					<input class="btn btn-primary btn-block" name="btnaddvideo" type="submit" value="Tilføj">
+					<input class="btn btn-primary btn-block mb-3" name="btnaddvideo" type="submit" value="Tilføj">
 				</form>
 			</div>
 		</div>
