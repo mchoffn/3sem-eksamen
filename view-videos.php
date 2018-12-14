@@ -13,7 +13,6 @@
 
 			<h2 class="text-center mt-3">Videoer:</h2>
 			<!-- Start video container -->
-			<div class="row d-flex justify-content-around mt-2">
 
 				<!--Showing all videos -->
 					<?php
@@ -62,7 +61,6 @@
 							$link->close();
 							?>
 						</div>
-				</div>
 			</div>
 			</div>
 			<?php
