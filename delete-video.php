@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<div class="container-fluid">
 	<?php
 	include 'includes/navbar.php';
 	?>
@@ -42,5 +43,6 @@
 	<?php
 	include 'includes/footer.php';
 	?>
+	</div>
 </body>
 </html>

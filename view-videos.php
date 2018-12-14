@@ -16,7 +16,6 @@
 			<div class="row d-flex justify-content-around mt-2">
 
 				<!--Showing all videos -->
-				<div class="col-xl-4 col-sm-12 mb-3">
 					<?php
 					require_once( 'database-connect/dbcon.php' );
 
@@ -63,7 +62,6 @@
 							$link->close();
 							?>
 						</div>
-					</div>
 				</div>
 			
 			<?php
@@ -75,7 +73,7 @@
 			</div>
 			<br>
 
-			<!-- dette er kassen med oprettelse af nye vidoer-->
+			<!-- new video-->
 			<div class="row border" id="tilfojvideo">
 				<div class="mx-auto">
 					<form class="" method="post" action="create-video.php" autocomplete="off" enctype="multipart/form-data">
