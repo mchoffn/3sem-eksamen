@@ -16,7 +16,6 @@
 			<div class="row d-flex justify-content-around mt-2">
 
 				<!--Showing all videos -->
-				<div class="col-xl-4 col-sm-12 mb-3">
 					<?php
 					require_once( 'database-connect/dbcon.php' );
 
@@ -65,7 +64,8 @@
 						</div>
 					</div>
 				</div>
-			
+			</div>
+			</div>
 			<?php
 			if ( isset( $_SESSION[ 'role' ] ) ) {
 				?>
@@ -109,5 +109,6 @@
 			include 'includes/footer.php';
 			?>
 		</div>
+		
 	</body>
 </html>
