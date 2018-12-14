@@ -33,9 +33,9 @@
 
 
 						<div class="category-item col-xl-3 col-sm-12">
-
 							<h2 class="d-inline">
 								<?= $title ?>
+							</h2>
 								<?php
 								if ( isset( $_SESSION[ 'role' ] ) ) {
 									?>
@@ -46,8 +46,11 @@
 											<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
 										</div>
 									</form>
-									<?php } ?>
-							</h2>
+								</div>
+									<?php } else {
+
+							}
+							?>
 							<p>
 								<?= $description ?>
 							</p>
@@ -55,21 +58,7 @@
 										echo "<video src='".$location."' controls width='320px' height='200px' >";
 										echo "</div>"; 
 										?>
-							</h2>
-
-							<?php
-							if ( isset( $_SESSION[ 'role' ] ) ) {
-								?>
-
-							<?php
-							} else {
-
-							}
-							?>
-
-
-							</div>
-
+						</div>
 
 							<?php
 
