@@ -16,7 +16,6 @@
 
 			<?php
 			$userid = filter_input(INPUT_POST, 'userid', FILTER_VALIDATE_INT) or die('Missing or illegal id parameter');
-			//$username = filter_input(INPUT_POST, 'username', FILTER_VALIDATE_INT) or die('Missing or illegal username parameter');
 			
 			require_once( 'database-connect/dbcon.php' );
 
@@ -36,8 +35,7 @@
 			
 			<?php
 		} else {
-			?><h2 class="text-center mt-3">Denne side er kun for administratorer</h2><br>
-			<div class="text-center mb-3"><a href="front-page.php">Gå tilbage til startsiden</a></div><?php
+			include 'includes/admin-only-msg.php';
 		}
 		?>
 			

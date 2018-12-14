@@ -6,20 +6,22 @@
 	</button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<a href="front-page.php"><button class="btn btn-dark mr-3 mb-xs-3">Hjem</button></a>
+		<a href="front-page.php">
+	<button class="btn btn-dark mr-3 mb-xs-3">Hjem</button>
+	</a>
 		<ul class="navbar-nav ml-auto">
 			<a class="nav-link text-dark"><?php
 		if(isset($_SESSION['uid'])){
 			echo $_SESSION['uname'];
 		} else { 
 					?>"Ikke logget ind"<?php
-				}
-	?> <?php
+				}?> 
+				<?php
 		if(isset($_SESSION['role'])){
 			echo '(Administrator)';
 				?><a href="admin-panel.php"><button class="btn btn-info mr-3">Admin panel</button></a><?php
 		} else {
-			echo '(Bruger)';
+			echo '(Bruger)'.PHP_EOL;
 		}
 		?>
 				<span class="sr-only"></span></a>
