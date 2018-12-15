@@ -18,6 +18,8 @@
 		if(isset($_SESSION['role'])){
 			?>
 			
+			<div class="row">
+			<div class="col-xl-6">
 			<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
 			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
@@ -31,7 +33,9 @@
 			</form>
 				</div>
 			</div>
+				</div>
 
+			<div class="col-xl-6">
 			<h2 class="text-center">Liste over brugere</h2>
 
 
@@ -89,9 +93,12 @@
 			include 'includes/admin-only-msg.php';
 		}?>
 			
-			<?php
+	
+			</div>
+				</div>
+			</div>
+		<?php
 			include 'includes/footer.php';
 			?>
-			</div>
 	</body>
 </html>
