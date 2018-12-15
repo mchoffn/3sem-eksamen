@@ -33,7 +33,7 @@
 					<?php
 					if ( isset( $_SESSION[ 'role' ] ) ) {
 						?>
-					<div class="delete d-inline float-right">
+					<div class="delete d-inline float-right indmedden">
 						<form action="delete-video.php" method="post">
 							<input type="hidden" name="vid" value="<?=$vid?>">
 							<div class="delete-img">
