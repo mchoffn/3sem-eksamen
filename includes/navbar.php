@@ -19,7 +19,7 @@
 				<?php
 		if(isset($_SESSION['role'])){
 			echo '(Administrator)';
-				?><a href="admin-panel.php"><button class="btn btn-info mr-3">Admin panel</button></a><?php
+				?><a href="admin-panel.php"><button class="btn btn-info mr-3 mb-3">Admin panel</button></a><?php
 		} else {
 			echo '(Bruger)'.PHP_EOL;
 		}

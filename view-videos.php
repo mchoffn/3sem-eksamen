@@ -26,8 +26,8 @@
 				$stmt->execute();
 				while ( $stmt->fetch() ) {
 					?>
-				<div class="category-item col-xl-6 col-sm-12 mb-3">
-					<h2 class="d-inline">
+				<div class="category-item col-xl-12 col-sm-12 mb-3">
+					<h2 class="col-xl-12 text-center">
 						<?= $title ?>
 					</h2>
 					<?php
@@ -37,19 +37,20 @@
 						<form action="delete-video.php" method="post">
 							<input type="hidden" name="vid" value="<?=$vid?>">
 							<div class="delete-img">
-								<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
+								<input type="image" src="images/delete-img.png" title="Slet video" width="20" height="20" alt="Delete">
 							</div>
 						</form>
 					</div>
 					<?php } else {
 							}
 							?>
-					<p>
+					<p class="text-center">
 						<?= $description ?>
 					</p>
 					<div class="video mx-auto">
 						<?php
-						?> <video src="<?= $location ?>" controls width='768px' height='432px'>
+						?> <video src="<?= $location ?>" width='768px' height='432px' controls>
+						</video>
 						</div>
 						
 					</div>

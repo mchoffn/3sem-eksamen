@@ -5,3 +5,15 @@
 
 .media-body {
   width: 100%; }
+
+.tilfojvideo {
+  background-color: darkgreen; }
+
+.texttilfoj {
+  color: darkgreen; }
+
+.inputtitel {
+  margin-top: 15px; }
+
+.video {
+  width: 50%; }
