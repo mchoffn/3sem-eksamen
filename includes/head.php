@@ -20,8 +20,3 @@
 <?php
 ini_set('display_errors', true);
 ?>
-
-<!--php session start-->
-<?php
-session_start();
-?>
