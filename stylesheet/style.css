@@ -141,10 +141,7 @@ body {
 .password {
   margin-top: 8px;
 
-.form-container {
-  border: 1px solid black;
 
-}
 
 @media screen and (max-width: 480px) {
   .input-field {
