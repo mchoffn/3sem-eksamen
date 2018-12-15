@@ -16,12 +16,12 @@
 <!--CSS-->
 <link rel="stylesheet" href="stylesheet/style.css">
 
-<!--Showing any errors-->
+<!--Showing any php errors-->
 <?php
 ini_set('display_errors', true);
 ?>
 
-<!--session start-->
+<!--php session start-->
 <?php
 session_start();
 ?>

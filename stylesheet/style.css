@@ -22,6 +22,12 @@ p {
   margin-bottom: inherit;
 }
 
+
+.col {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /*Add new catagory page*/
 .form-input {
   display: -webkit-box;
@@ -41,7 +47,6 @@ p {
 .input-field {
   padding: 5px;
   border: none;
-  border-bottom: 1px solid black;
   width: 300px;
 }
 
@@ -53,6 +58,18 @@ p {
 
 .media-body {
   width: 100%;
+}
+
+.tilfojvideo {
+  background-color: darkgreen;
+}
+
+.texttilfoj {
+  color: darkgreen;
+}
+
+.inputtitel {
+  margin-top: 15px;
 }
 
 body {
@@ -102,7 +119,6 @@ body {
 }
 
 .form-signin input[type="password"] {
-  margin-bottom: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -117,8 +133,13 @@ body {
   margin-left: 15px;
 }
 
+
 .password {
   margin-top: 8px;
+
+.form-container {
+  border: 1px solid black;
+
 }
 
 @media screen and (max-width: 480px) {

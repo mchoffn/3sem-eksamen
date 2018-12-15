@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<div class="container-fluid">
 	<?php
 	include 'includes/navbar.php';
 	?>
@@ -30,7 +31,7 @@
 	?>
 	
 	<br>
-		<div class="text-center mb-3"><a href="front-page.php">Tilbage til startsiden</a></div>
+		<div class="text-center mb-3"><a href="view-videos.php">Tilbage til startsiden</a></div>
 	
 	<?php
 		} else {
@@ -42,5 +43,6 @@
 	<?php
 	include 'includes/footer.php';
 	?>
+	</div>
 </body>
 </html>
