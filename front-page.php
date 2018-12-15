@@ -109,10 +109,7 @@
 			$link->close();
 			?>
 		</div>
-		<!--End category container-->
-
-		<!--New row-->
-		
+		<!--End category container-->		
 
 		<?php
 		include 'includes/footer.php';

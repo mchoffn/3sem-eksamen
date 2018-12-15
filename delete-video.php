@@ -26,7 +26,7 @@
 	$stmt->bind_param( 'i', $vid );
 	$stmt->execute();
 	
-	?><div class="text-center mt-3">Video <?php $vt ?> slettet</div><?php
+	?><div class="text-center mt-3">Video <?= $vt ?> slettet</div><?php
 	$link->close();
 	?>
 	
