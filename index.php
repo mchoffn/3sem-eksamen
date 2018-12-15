@@ -4,8 +4,8 @@
 	<?php
 	include 'includes/head.php';
 	?>
-
 </head>
+	
 <div class="container-fluid">
 	<div class="row">
 		<div class="mx-auto">
