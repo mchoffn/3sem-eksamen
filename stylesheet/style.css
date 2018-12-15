@@ -71,6 +71,10 @@ p {
   margin-top: 15px;
 }
 
+.video {
+  width: 50%;
+}
+
 body {
   background: #eee !important;
 }
