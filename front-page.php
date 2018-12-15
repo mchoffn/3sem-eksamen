@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -38,7 +41,7 @@
 					<br>
 					<div class="custom-file mb-3">
 						<input type="file" accept="image/png, image/jpeg, image/jpg" name="category_thumbnail" class="form-control-file" id="customFile" required>
-						<label class="custom-file-label" for="customFile">300x300 Forhåndsvisning (.png, .jpeg, .jpg)</label>
+						<label class="custom-file-label" for="customFile">(.png, .jpeg, .jpg)</label>
 					</div>
 					<br>
 					<input class="btn btn-primary btn-block" type="submit" name="btnaddcategory" value="Tilføj">
@@ -67,9 +70,9 @@
 
 			while($result->fetch()){
 					?>
-			<div class="col"></div>
+			
 			<div class="category-item col-xl-2 col-sm-12 mb-3">
-
+<div class="col"></div>
 				<h2 class="d-inline">
 					<?= $title ?>
 				</h2>
@@ -87,10 +90,8 @@
 						<?php
 						} else {
 						?><?php
-		}
-		?>
-					
-				
+						}
+				?>
 				<p>
 					<?= $description ?>
 				</p>
@@ -105,14 +106,10 @@
 			//echo "Titel: " . $row[ "title" ] . "<br>" . "Beskrivelse: " . $row[ "description" ]. "<br>" . " Forhåndsvisning: " . $row[ "thumbnail" ] . "<br>".PHP_EOL;
 			}
 
-
 			$link->close();
 			?>
 		</div>
-		<!--End category container-->
-
-		<!--New row-->
-		
+		<!--End category container-->		
 
 		<?php
 		include 'includes/footer.php';

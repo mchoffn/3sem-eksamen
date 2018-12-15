@@ -1,9 +1,13 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
 	<?php
 	include 'includes/head.php';
 	?>
+	</head>
 
 	<body>
 		<div class="container-fluid">
@@ -97,7 +101,6 @@
 						</form>
 					</div>
 				</div>
-
 
 				<?php
 				} else {

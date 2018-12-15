@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -26,7 +29,7 @@
 	$stmt->bind_param( 'i', $vid );
 	$stmt->execute();
 	
-	?><div class="text-center mt-3">Video <?php $vt ?> slettet</div><?php
+	?><div class="text-center mt-3">Video med id "<?= $vid ?>" slettet</div><?php
 	$link->close();
 	?>
 	

@@ -1,9 +1,13 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
 	<?php
 	include 'includes/head.php';
 	?>
+	</head>
 
 	<body>
 		
@@ -17,6 +21,8 @@
 		if(isset($_SESSION['role'])){
 			?>
 			
+			<div class="row">
+			<div class="col-xl-6">
 			<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
 			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
@@ -30,7 +36,9 @@
 			</form>
 				</div>
 			</div>
+				</div>
 
+			<div class="col-xl-6">
 			<h2 class="text-center">Liste over brugere</h2>
 
 
@@ -47,7 +55,7 @@
 				// output data of each row
 				while ( $result->fetch() ) {
 					?>
-			<div class="row text-center mb-3 col-xl-2 mx-auto">Brugernavn:
+			<div class="row text-center mb-3 col-xl-4 mx-auto">Brugernavn:
 			<?= $username ?>
 				<div class="d-inline float-right mb-3">
 					<form action="make-admin.php" method="post">
@@ -88,9 +96,12 @@
 			include 'includes/admin-only-msg.php';
 		}?>
 			
-			<?php
+	
+			</div>
+				</div>
+			</div>
+		<?php
 			include 'includes/footer.php';
 			?>
-			</div>
 	</body>
 </html>
