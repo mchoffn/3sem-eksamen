@@ -18,6 +18,10 @@ html {
   margin-left: 0;
 }
 
+p {
+  margin-bottom: inherit;
+}
+
 /*Add new catagory page*/
 .form-input {
   display: -webkit-box;
@@ -111,6 +115,10 @@ body {
   max-width: 90px;
   paddding-top: 20px;
   margin-left: 15px;
+}
+
+.password {
+  margin-top: 8px;
 }
 
 @media screen and (max-width: 480px) {

@@ -20,7 +20,10 @@
   <div class="wrapper">
     <form class="form-signin" action="login.php" method="post">       
       <h2 class="form-signin-heading">Medlem</h2>
+      <p>Brugernavn</p>
       <input type="text" class="form-control" name="un" placeholder="Brugernavn" required="" autofocus="" />
+
+      <p class="password">Adgangskode</p>
       <input type="password" class="form-control" name="pw" placeholder="Password" required=""/>      
 
       <button class="btn btn-lg btn-primary btn-block" type="submit" value="Log ind">Login</button>   
