@@ -52,7 +52,7 @@
 				// output data of each row
 				while ( $result->fetch() ) {
 					?>
-			<div class="row text-center mb-3 col-xl-2 mx-auto">Brugernavn:
+			<div class="row text-center mb-3 col-xl-4 mx-auto">Brugernavn:
 			<?= $username ?>
 				<div class="d-inline float-right mb-3">
 					<form action="make-admin.php" method="post">
