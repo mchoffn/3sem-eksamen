@@ -20,10 +20,10 @@
 			<div class="form-container mx-auto border-0 pb-3">
 			<div class="row justify-content-center">
 			<form class="create-user mr-3 mt-3" action="create-user.php" method="post">
-				<h2 class="">Opret bruger</h2>
-				<p class="">Brugernavn</p>
+				<h2 class="text-light">Opret bruger</h2>
+				<p class="text-light">Brugernavn</p>
 				<input class="border-0 p-2 rounded mb-3" type="text" autocomplete="off" name="un" placeholder="Brugernavn" required>
-				<p class="">Password</p>
+				<p class="text-light">Password</p>
 				<input class="border-0 p-2 rounded mb-3" type="password" autocomplete="off" name="pw" placeholder="Password" required>
 				<br>
 				<input class="btn btn-outline-primary" type="submit" value="Opret bruger">

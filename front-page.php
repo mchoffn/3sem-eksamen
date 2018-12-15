@@ -68,29 +68,29 @@
 			while($result->fetch()){
 					?>
 			<div class="col"></div>
-			<div class="category-item col-xl-3 col-sm-12">
+			<div class="category-item col-xl-2 col-sm-12 mb-3">
 
 				<h2 class="d-inline">
 					<?= $title ?>
 				</h2>
-				<div class="delete d-inline float-right">
-					
-						<?php
+					<?php
 						if(isset($_SESSION['role'])){
 						?>
+				<div class="delete d-inline float-right">
 					<form action="delete-category.php" method="post">
 					   <input type="hidden" name="cid" value="<?=$cid?>">
 							<div class="delete-img">
 									<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
 							</div>
 					</form>
+					</div>
 						<?php
 						} else {
 						?><?php
 		}
 		?>
 					
-				</div>
+				
 				<p>
 					<?= $description ?>
 				</p>
