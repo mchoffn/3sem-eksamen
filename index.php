@@ -16,8 +16,17 @@
 
 
   <div class="wrapper">
-    <form class="form-signin needs-validation" action="login.php" method="post" autocomplete="off" novalidate>       
+    <form class="form-signin needs-validation" action="login.php" method="post" autocomplete="off" novalidate>
       <h2 class="form-signin-heading">Medlem</h2>
+
+      <p>Brugernavn</p>
+      <input type="text" class="form-control" name="un" placeholder="Brugernavn" required="" autofocus="" />
+
+      <p class="password">Adgangskode</p>
+      <input type="password" class="form-control" name="pw" placeholder="Password" required=""/>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Log ind">Login</button>
+
 		<label for="validationServerUsername">Brugernavn</label>
       <input type="text" class="form-control is-valid" id="validationServer01" name="un" placeholder="Brugernavn" required autofocus>
 		<div class="invalid-feedback">
@@ -28,10 +37,11 @@
 		<div class="invalid-feedback">
         <p>Indtast venligst et password</p>
       </div>
-      <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" value="Log ind">Login</button>   
+      <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" value="Log ind">Login</button>
+
     </form>
   </div>
-	
+
 	<!--Bootstrap form validator-->
 	<script src="javascript/form-validator.js"></script>
 
