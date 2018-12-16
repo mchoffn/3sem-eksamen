@@ -160,4 +160,7 @@ body {
     -ms-flex-order: 3;
     order: 3;
   }
+  .adminbtn {
+    margin-bottom: 10px;
+  }
 }

@@ -16,9 +16,9 @@ session_start();
 		?>
 
 		<?php
-		if(isset($_SESSION['role'])){
+		if ( isset( $_SESSION[ 'role' ] ) ) {
 			?>
-		
+
 		<!--Add new category-->
 		<div class="row">
 			<h2 class="mx-auto mt-3">Tilføj ny katagori</h2>
@@ -48,10 +48,10 @@ session_start();
 				</form>
 			</div>
 		</div>
-		
+
 		<?php
 		} else {
-			
+
 		}
 		?>
 
@@ -65,39 +65,43 @@ session_start();
 			//Showing all categories
 			$sql = "SELECT id AS cid, title, description, thumbnail AS img FROM ss_category";
 			$result = $link->prepare( $sql );
-			$result->bind_result($cid, $title, $description, $img);
+			$result->bind_result( $cid, $title, $description, $img );
 			$result->execute();
 
-			while($result->fetch()){
-					?>
-			
+			while ( $result->fetch() ) {
+				?>
+
 			<div class="category-item col-xl-2 col-sm-12 mb-3">
-<div class="col"></div>
+				<div class="col"></div>
 				<h2 class="d-inline">
 					<?= $title ?>
 				</h2>
-					<?php
-						if(isset($_SESSION['role'])){
-						?>
+				<?php
+				if ( isset( $_SESSION[ 'role' ] ) ) {
+					?>
 				<div class="delete d-inline float-right">
 					<form action="delete-category.php" method="post">
-					   <input type="hidden" name="cid" value="<?=$cid?>">
-							<div class="delete-img">
-									<input type="image" src="images/delete-img.png" title="Delete" width="20" height="20" alt="Delete">
-							</div>
+						<input type="hidden" name="cid" value="<?=$cid?>">
+						<div class="delete-img">
+							<input type="image" src="images/delete-img.png" title="Slet kategori" width="20" height="20" alt="Delete">
+						</div>
 					</form>
-					</div>
-						<?php
-						} else {
-						?><?php
-						}
+				</div>
+				<?php
+				} else {
+
+				}
 				?>
 				<p>
 					<?= $description ?>
 				</p>
+
+				
+
 				<a href="view-videos.php">
 					<img class="mb-3" src="<?= $img ?>" height="300" width="300"><img>
 				</a>
+			
 			</div>
 			<div class="col"></div>
 
@@ -109,7 +113,7 @@ session_start();
 			$link->close();
 			?>
 		</div>
-		<!--End category container-->		
+		<!--End category container-->
 
 		<?php
 		include 'includes/footer.php';
