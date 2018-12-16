@@ -29,13 +29,11 @@ session_start();
 		$stmt->bind_param( 'i', $userid );
 		$stmt->execute();
 
-		$link->close();
-
 		?>
 		<div class="text-center mt-3">Bruger med id "
 			<?= $userid ?>" slettet</div>
 		<?php
-
+			$link->close();
 		?>
 
 		<br>

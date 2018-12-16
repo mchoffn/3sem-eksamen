@@ -28,11 +28,12 @@ session_start();
 		$stmt = $link->prepare( $sql );
 		$stmt->bind_param( 'i', $cid );
 		$stmt->execute();
-
+			
 		?>
-		<div class="text-center mt-3">Kategori
-			<?php $ct ?> slettet</div>
+		<div class="text-center mt-3">Kategori med id"
+			<?= $cid ?>" slettet</div>
 		<?php
+		
 		$link->close();
 		?>
 

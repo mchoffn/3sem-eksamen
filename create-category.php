@@ -52,6 +52,7 @@ if(isset($_POST['btnaddcategory'])){
 				$stmt = $link->prepare( $sql );
 				$stmt->bind_param( 'sss', $ct, $cd, $ctn );
 				$stmt->execute();
+				
 
 				if ( $stmt->affected_rows > 0 ) {
 					?><div class="text-center mt-3 mb-3">Kategori "<?= $ct ?>" oprettet.<br> Gå tilbage til <a href="front-page.php">startsiden</a></div>
